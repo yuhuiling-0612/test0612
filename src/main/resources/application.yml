@@ -1,0 +1,24 @@
+spring:
+  resources:
+    static-locations: classpath:/TEST0529/
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    #    代码生成通过读取driverClassName来判断数据库类型
+    #    driverClassName: oracle.jdbc.driver.OracleDriver
+    druid:
+      first:  #数据源1
+        driverClassName: oracle.jdbc.driver.OracleDriver
+        url: jdbc:oracle:thin:@//10.0.11.83:1545/srm.weichai.com
+        username: lisongyue
+        password: lisongyue
+    #        url: jdbc:oracle:thin:@localhost:1521:platform
+    #        username: platform
+    #        password: 123456
+
+      second:  #数据源2
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.197.128:3306/testMysql
+        username: root
+        password: 1Y%2H%ll
+server:
+  port: 8088
